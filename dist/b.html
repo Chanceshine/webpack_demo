@@ -17,9 +17,9 @@
 	
 		publicPath : "http://cdn.com/"
 	
-		chunks : {"b":{"size":32,"entry":"http://cdn.com/js/b-03521fa7fc25952b1a6e.js","hash":"03521fa7fc25952b1a6e","css":[]}}
+		chunks : {"main":{"size":20,"entry":"http://cdn.com/js/main-4732d5f58233c57924c6.js","hash":"4732d5f58233c57924c6","css":[]},"b":{"size":32,"entry":"http://cdn.com/js/b-03521fa7fc25952b1a6e.js","hash":"03521fa7fc25952b1a6e","css":[]}}
 	
-		js : ["http://cdn.com/js/b-03521fa7fc25952b1a6e.js"]
+		js : ["http://cdn.com/js/main-4732d5f58233c57924c6.js","http://cdn.com/js/b-03521fa7fc25952b1a6e.js"]
 	
 		css : []
 	
@@ -45,13 +45,13 @@
 	
 		showErrors : true
 	
-		chunks : ["b"]
+		chunks : "all"
 	
-		excludeChunks : []
+		excludeChunks : ["a","c"]
 	
 		title : "wepack is b"
 	
 		xhtml : false
 	
-<script type="text/javascript" src="http://cdn.com/js/b-03521fa7fc25952b1a6e.js"></script></body>
+<script type="text/javascript" src="http://cdn.com/js/main-4732d5f58233c57924c6.js"></script><script type="text/javascript" src="http://cdn.com/js/b-03521fa7fc25952b1a6e.js"></script></body>
 </html>
