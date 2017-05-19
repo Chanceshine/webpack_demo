@@ -8,7 +8,7 @@ module.exports = {
 	},
 	output: {
 		path: path.join(__dirname, './dist'),
-		filename: '[name]-[hash].js'
+		filename: 'js/[name]-[hash].js'		//js文件生成在js目录，其他文件生成在dist目录
 	},
 	plugins: [
 		new htmlWebpackPlugin({
