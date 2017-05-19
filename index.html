@@ -3,21 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title><%= htmlWebpackPlugin.options.title %></title>
+	<script type="text/javascript">
+		<%= compilation.assets[htmlWebpackPlugin.files.chunks.main.entry.substr(htmlWebpackPlugin.files.publicPath.length)].source() %>
+	</script>
 </head>
 <body>
 
-	<%= htmlWebpackPlugin.options.date %>
-	<!-- 查看htmlwebpackplugin中有多少个key(files,options) -->
-	<% for(var key in htmlWebpackPlugin){ %>
-		<%= key %>
-	<% }%>
-	<!-- 遍历files -->
-	<% for(var key in htmlWebpackPlugin.files){ %>
-		<%= key %> : <%= JSON.stringify(htmlWebpackPlugin.files[key]) %>
-	<% }%>
-	<!-- 遍历options -->
-	<% for(var key in htmlWebpackPlugin.options){ %>
-		<%= key %> : <%= JSON.stringify(htmlWebpackPlugin.options[key]) %>
-	<% }%>
+	
 </body>
 </html>

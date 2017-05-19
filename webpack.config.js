@@ -33,7 +33,7 @@ module.exports = {
 			template: 'index.html',		//以index.html为模板文件生成dist目录下的index.html
 			inject: 'body',		//定义生成js的插入位置，head,body,false
 			title: 'wepack is c',		//index.html模板可以取出这个值
-			chunks: ['c']
+			chunks: ['main','c']
 		})
 	]
 }
