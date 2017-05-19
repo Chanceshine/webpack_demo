@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>wepack is a</title>
+</head>
+<body>
+
+	
+	<!-- 查看htmlwebpackplugin中有多少个key(files,options) -->
+	
+		files
+	
+		options
+	
+	<!-- 遍历files -->
+	
+		publicPath : "http://cdn.com/"
+	
+		chunks : {"main":{"size":20,"entry":"http://cdn.com/js/main-4732d5f58233c57924c6.js","hash":"4732d5f58233c57924c6","css":[]},"a":{"size":40,"entry":"http://cdn.com/js/a-a6385877a825d5828c96.js","hash":"a6385877a825d5828c96","css":[]}}
+	
+		js : ["http://cdn.com/js/main-4732d5f58233c57924c6.js","http://cdn.com/js/a-a6385877a825d5828c96.js"]
+	
+		css : []
+	
+		manifest : 
+	
+	<!-- 遍历options -->
+	
+		template : "E:\\self-Learning\\webpack\\webpack_demo\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\self-Learning\\webpack\\webpack_demo\\index.html"
+	
+		filename : "a.html"
+	
+		hash : false
+	
+		inject : "body"
+	
+		compile : true
+	
+		favicon : false
+	
+		minify : false
+	
+		cache : true
+	
+		showErrors : true
+	
+		chunks : ["main","a"]
+	
+		excludeChunks : []
+	
+		title : "wepack is a"
+	
+		xhtml : false
+	
+<script type="text/javascript" src="http://cdn.com/js/main-4732d5f58233c57924c6.js"></script><script type="text/javascript" src="http://cdn.com/js/a-a6385877a825d5828c96.js"></script></body>
+</html>
