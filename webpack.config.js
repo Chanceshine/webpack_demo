@@ -8,7 +8,8 @@ module.exports = {
 	},
 	output: {
 		path: path.join(__dirname, './dist'),
-		filename: 'js/[name]-[hash].js'		//js文件生成在js目录，其他文件生成在dist目录
+		filename: 'js/[name]-[hash].js',		//js文件生成在js目录，其他文件生成在dist目录
+		publicPath: 'http://cdn.com'		//上线地址
 	},
 	plugins: [
 		new htmlWebpackPlugin({
@@ -16,7 +17,11 @@ module.exports = {
 			template: 'index.html',		//以index.html为模板文件生成dist目录下的index.html
 			inject: false,		//定义生成js的插入位置，head,body,false
 			title: 'wepack is good',		//index.html模板可以取出这个值
-			date: new Date()
+			date: new Date(),
+			minify: {
+				removeComments: true,
+				collapseWhitespace: true
+			}
 		})
 	]
 }
