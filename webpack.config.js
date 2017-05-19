@@ -17,21 +17,21 @@ module.exports = {
 		new htmlWebpackPlugin({
 			filename: 'a.html',	//设置生成文件名
 			template: 'index.html',		//以index.html为模板文件生成dist目录下的index.html
-			inject: 'body',		//定义生成js的插入位置，head,body,false
+			inject: false,		//定义生成js的插入位置，head,body,false
 			title: 'wepack is a',		//index.html模板可以取出这个值
 			chunks: ['main','a']	//只引入指定文件
 		}),
 		new htmlWebpackPlugin({
 			filename: 'b.html',	//设置生成文件名
 			template: 'index.html',		//以index.html为模板文件生成dist目录下的index.html
-			inject: 'body',		//定义生成js的插入位置，head,body,false
+			inject: false,		//定义生成js的插入位置，head,body,false
 			title: 'wepack is b',		//index.html模板可以取出这个值
 			excludeChunks: ['a','c']	//除了指定文件，其他js文件都引入
 		}),
 		new htmlWebpackPlugin({
 			filename: 'c.html',	//设置生成文件名
 			template: 'index.html',		//以index.html为模板文件生成dist目录下的index.html
-			inject: 'body',		//定义生成js的插入位置，head,body,false
+			inject: false,		//定义生成js的插入位置，head,body,false
 			title: 'wepack is c',		//index.html模板可以取出这个值
 			chunks: ['main','c']
 		})
