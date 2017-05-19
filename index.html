@@ -3,8 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title><%= htmlWebpackPlugin.options.title %></title>
+	<script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </head>
 <body>
+<script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.a.entry %>"></script>
+
 	<%= htmlWebpackPlugin.options.date %>
 	<!-- 查看htmlwebpackplugin中有多少个key(files,options) -->
 	<% for(var key in htmlWebpackPlugin){ %>

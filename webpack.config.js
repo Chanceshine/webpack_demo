@@ -14,7 +14,7 @@ module.exports = {
 		new htmlWebpackPlugin({
 			filename: 'index.html',	//设置生成文件名
 			template: 'index.html',		//以index.html为模板文件生成dist目录下的index.html
-			inject: 'head',		//定义生成js的插入位置，head,body,false
+			inject: false,		//定义生成js的插入位置，head,body,false
 			title: 'wepack is good',		//index.html模板可以取出这个值
 			date: new Date()
 		})
