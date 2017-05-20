@@ -101,6 +101,8 @@ var _layer2 = _interopRequireDefault(_layer);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
+	var NUM = 1;
+	alert(NUM);
 	console.log(_layer2.default);
 };
 new App();

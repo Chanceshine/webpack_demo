@@ -2,10 +2,23 @@ var path = require('path');
 var htmlWebpackPlugin = require('html-webpack-plugin');	//插件的引用，commonjs模块引用的写法 
 
 module.exports = {
-	entry: 'src/app.js',
+	entry: './src/app.js',
 	output: {
 		path: path.join(__dirname, './dist'),
 		filename: 'js/[name].bundle.js',		//js文件生成在js目录，其他文件生成在dist目录
+	},
+	module: {
+		loaders: [
+			{
+				test: /\.js$/,
+				loader: 'babel-loader',
+				exclude: './node_modules/',
+				include: './src/'
+				options:{
+					'presets': ['env']
+				}
+			}
+		]
 	},
 	plugins: [
 		new htmlWebpackPlugin({
