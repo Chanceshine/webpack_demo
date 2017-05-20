@@ -12,8 +12,8 @@ module.exports = {
 			{
 				test: /\.js$/,
 				loader: 'babel-loader',
-				exclude: './node_modules/',
-				include: './src/'
+				exclude: __dirname+'./node_modules/',
+				include: __dirname+'./src/',
 				options:{
 					'presets': ['env']
 				}
