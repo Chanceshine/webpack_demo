@@ -1,4 +1,4 @@
-import tpl form 'layer.html';
+// import tpl form 'layer.html';
 
 function layer () {
 	return {
