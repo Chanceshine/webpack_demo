@@ -19,35 +19,38 @@ Learning the way
 <p>6、安装本地webpack( 要先全局安装之后再本地安装 )</p>
 <pre>npm install webpack -D</pre>
 <hr>
-## webpack2.5.1中css-loader和postcss-loader冲突的问题
-css-loader中options中设置importLoaders: 1,会导致webpack找不到postcss-load配置
+
+### webpack2.5.1中css-loader和postcss-loader冲突的问题
+css-loader中options中设置importLoaders: 1,会导致webpack报错，提示找不到postcss-load配置
 <br>
 `解决办法`
--webpack.config.js
+
+- webpack.config.js
 <pre>modules:{
   rules: [
-    {
-      test: /\.css$/,
-			use: [
-				'style-loader',
-				{ 
-					loader:'css-loader',
-					options: {
-						importLoaders: 1,
-					}
-				},
-				{
-					loader: 'postcss-loader',
-					options: {
-						config: {
-							path: path.resolve(__dirname,'./postcss.config.js')
-						}
-					}		
+     {
+      	test: /\.css$/,
+	use: [
+		'style-loader',
+		{ 
+			loader:'css-loader',
+			options: {
+				importLoaders: 1,
+			}
+		},
+		{
+			loader: 'postcss-loader',
+			options: {
+				config: {
+					path: path.resolve(__dirname,'./postcss.config.js')
 				}
-			]
-	  }
+			}		
+		}
+	]
+     }
   ]
 }</pre>
+
 * 在webpack.config.js同级目录下新建postcss.config.js
 <pre>
 module.exports = {
