@@ -1,4 +1,5 @@
-// import tpl form 'layer.html';
+import './layer.less';
+import tpl from './layer.tpl';
 
 function layer () {
 	return {
@@ -6,5 +7,4 @@ function layer () {
 		tpl: tpl
 	};
 }
-
 export default layer;

@@ -18,10 +18,18 @@
   },
   "homepage": "https://github.com/Chanceshine/webpack_demo#readme",
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
     "babel-preset-latest": "^6.24.1",
+    "html-loader": "^0.4.5",
+    "image-webpack-loader": "^3.3.1",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "postcss-load-config": "^1.2.0",
+    "postcss-loader": "^2.0.5",
+    "url-loader": "^0.5.8",
     "webpack": "^2.5.1"
   }
 }
